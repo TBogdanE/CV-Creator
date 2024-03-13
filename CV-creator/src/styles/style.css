@@ -1,0 +1,48 @@
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  grid-area: 1 / 1 / 2 / 16;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-title {
+  font-size: 2em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(32, 32, 160);
+}
+
+#cv-page {
+  grid-area: 3 / 6 / 15 / 11;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  border: 0.1em solid rgb(32, 32, 160);
+  border-radius: 10px;
+}
+
+.cv-section {
+  padding: 2em;
+  width: 80%;
+  margin: 1em;
+}
+
+.cv-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.cv-text {
+  font-size: 1em;
+  font-weight: 100;
+  font-style: italic;
+}
