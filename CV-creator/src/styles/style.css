@@ -70,5 +70,15 @@ header {
 
 #edit-cv-sct {
   grid-area: 3 / 2 / 15 / 8;
-  background-color: red;
+  border: 0.1em solid rgb(32, 32, 160);
+  border-radius: 10px;
+}
+
+.edit-cv-sct-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-cv-sct-edit-btn {
 }
