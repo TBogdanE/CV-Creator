@@ -1,7 +1,7 @@
 import { useState } from "react";
 import EditCVSct from "./EditCVSct";
 
-export default function EditCVBtn({ data, updatePCV }) {
+export default function EditCVBtn({ updatePCV }) {
   const [isEditMode, setIsEditMode] = useState(false);
   const [gridArea, setGridArea] = useState("3 / 9 / 15 / 15");
 
@@ -17,7 +17,7 @@ export default function EditCVBtn({ data, updatePCV }) {
   return (
     <>
       {isEditMode ? (
-        <EditCVSct data={data} updatePCV={updatePCV} />
+        <EditCVSct updatePCV={updatePCV} />
       ) : (
         <button id="edit-cv-btn" onClick={handleEditCVBtn}>
           Edit CV

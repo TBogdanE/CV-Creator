@@ -29,7 +29,7 @@ export default function CVPage() {
           personWorkEnd={data.workenddate}
         />
       </div>
-      <EditCVBtn data={data} updatePCV={updatePersonCV} />
+      <EditCVBtn updatePCV={updatePersonCV} />
     </>
   );
 }

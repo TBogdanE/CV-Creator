@@ -1,43 +1,43 @@
 import personCV from "../functions/data";
 import { useState } from "react";
 
-export default function EditCVSct({ data, updatePCV }) {
+export default function EditCVSct({ updatePCV }) {
   return (
     <>
       <div id="edit-cv-sct">
-        <InputData title={"Name"} seletor={"name"} value={data.name} />
-        <InputData title={"Email"} seletor={"email"} value={data.email} />
-        <InputData title={"Phone"} seletor={"phone"} value={data.phone} />
+        <InputData title={"Name"} seletor={"name"} value={personCV.name} />
+        <InputData title={"Email"} seletor={"email"} value={personCV.email} />
+        <InputData title={"Phone"} seletor={"phone"} value={personCV.phone} />
         <InputData
           title={"Education"}
           seletor={"education"}
-          value={data.education}
+          value={personCV.education}
         />
-        <InputData title={"Date"} seletor={"date"} value={data.date} />
+        <InputData title={"Date"} seletor={"date"} value={personCV.date} />
         <InputData
           title={"Experience"}
           seletor={"experience"}
-          value={data.experience}
+          value={personCV.experience}
         />
         <InputData
           title={"Workposition"}
           seletor={"workposition"}
-          value={data.workposition}
+          value={personCV.workposition}
         />
         <InputData
           title={"Responsability"}
           seletor={"resp"}
-          value={data.resp}
+          value={personCV.resp}
         />
         <InputData
           title={"Start date"}
           seletor={"workstartdate"}
-          value={data.workstartdate}
+          value={personCV.workstartdate}
         />
         <InputData
           title={"End date"}
           seletor={"workenddate"}
-          value={data.workenddate}
+          value={personCV.workenddate}
         />
         <SubmitBtn updatePCV={updatePCV} />
       </div>
