@@ -72,13 +72,49 @@ header {
   grid-area: 3 / 2 / 15 / 8;
   border: 0.1em solid rgb(32, 32, 160);
   border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
 }
 
-.edit-cv-sct-elements {
+.edit-cv-sct-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  padding: 0.8em;
+}
+
+.edit-cv-sct-input {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  border: 0.15em solid rgb(32, 32, 160);
+  border-radius: 8px;
+  width: 60%;
 }
 
-#edit-cv-sct-edit-btn {
+#edit-cv-sct-btn-sct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.edit-cv-sct-btn {
+  background-color: transparent;
+  color: rgb(32, 32, 160);
+  margin: 0 2em 0 2em;
+  border: 0.2em solid rgb(32, 32, 160);
+  border-radius: 8px;
+  width: 5;
+}
+
+/*PDF Settings*/
+.pdf-text-size {
+  font-size: 1em;
 }

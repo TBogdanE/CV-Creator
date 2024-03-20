@@ -1,5 +1,6 @@
 import personCV from "../functions/data";
 import { useState } from "react";
+import generatePDF from "./pdfconverter";
 
 export default function EditCVSct({ updatePCV }) {
   return (
@@ -39,7 +40,7 @@ export default function EditCVSct({ updatePCV }) {
           seletor={"workenddate"}
           value={personCV.workenddate}
         />
-        <SubmitBtn updatePCV={updatePCV} />
+        <Buttons updatePCV={updatePCV} />
       </div>
     </>
   );
@@ -54,15 +55,15 @@ function InputData({ title, value, seletor }) {
   };
 
   return (
-    <>
+    <div className="edit-cv-sct-box">
       <label>{title}:</label>
       <input
         type="text"
         value={text}
-        className="edit-cv-sct-elements"
+        className="edit-cv-sct-input"
         onChange={handleChange}
       />
-    </>
+    </div>
   );
 }
 
@@ -73,17 +74,23 @@ function handleSubmit({ event, updatePCV }) {
   console.log("data3");
 }
 
-function SubmitBtn({ updatePCV }) {
+function Buttons({ updatePCV }) {
   return (
-    <>
+    <div id="edit-cv-sct-btn-sct">
       <button
         type="submit"
-        id="edit-cv-sct-edit-btn"
+        className="edit-cv-sct-btn"
         onClick={(event) => handleSubmit({ event, updatePCV })}
       >
-        Submit
+        Save
       </button>
-    </>
+      <button type="submit" className="edit-cv-sct-btn">
+        Cancel
+      </button>
+      <button type="submit" className="edit-cv-sct-btn" onClick={generatePDF}>
+        Download PDF
+      </button>
+    </div>
   );
 }
 function CancelBtn() {}
