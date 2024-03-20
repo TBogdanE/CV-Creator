@@ -5,6 +5,7 @@ import EditCVBtn from "./EditCVBtn";
 
 export default function CVPage() {
   const [data, updatePersonCV] = useState(personCV);
+  console.log("data1", data);
 
   return (
     <>
@@ -28,7 +29,7 @@ export default function CVPage() {
           personWorkEnd={data.workenddate}
         />
       </div>
-      <EditCVBtn updatePCV={updatePersonCV} />
+      <EditCVBtn data={data} updatePCV={updatePersonCV} />
     </>
   );
 }
