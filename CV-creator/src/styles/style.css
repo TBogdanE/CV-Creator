@@ -111,7 +111,13 @@ header {
   margin: 0 2em 0 2em;
   border: 0.2em solid rgb(32, 32, 160);
   border-radius: 8px;
-  width: 5;
+  width: 10em;
+  transition: 0.2s ease-in-out;
+}
+
+.edit-cv-sct-btn:hover {
+  background-color: rgb(32, 32, 160);
+  color: white;
 }
 
 /*PDF Settings*/

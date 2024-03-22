@@ -1,23 +1,30 @@
 import { useState } from "react";
 import EditCVSct from "./EditCVSct";
+import personCV from "../functions/data";
 
 export default function EditCVBtn({ updatePCV }) {
   const [isEditMode, setIsEditMode] = useState(false);
-  const [gridArea, setGridArea] = useState("3 / 9 / 15 / 15");
+  const [editSctGridArea, setEditSctGridArea] = useState("3 / 9 / 15 / 15");
 
   function handleEditCVBtn() {
     setIsEditMode(!isEditMode);
     if (!isEditMode) {
-      setGridArea("3 / 6 / 15 / 11");
+      setEditSctGridArea("3 / 6 / 15 / 11");
+    } else {
+      setEditSctGridArea("3 / 9 / 15 / 15");
     }
     const cvpage = document.getElementById("cv-page");
-    cvpage.style.gridArea = gridArea;
+    cvpage.style.gridArea = editSctGridArea;
   }
 
   return (
     <>
       {isEditMode ? (
-        <EditCVSct updatePCV={updatePCV} />
+        <EditCVSct
+          personCV={personCV}
+          updatePCV={updatePCV}
+          handleEditCVBtn={handleEditCVBtn}
+        />
       ) : (
         <button id="edit-cv-btn" onClick={handleEditCVBtn}>
           Edit CV
