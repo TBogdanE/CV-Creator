@@ -67,15 +67,15 @@ function InputData({ title, value, seletor }) {
   );
 }
 
-function handleSubmit({ event, updatePCV }) {
+function handleSubmit({ event, updatePCV, handleEditCVBtn }) {
   event.preventDefault();
   const data = { ...personCV };
   updatePCV(data);
+  handleEditCVBtn();
 }
 
 function handleCancelEdit({ event, handleEditCVBtn }) {
   event.preventDefault();
-
   handleEditCVBtn();
 }
 
@@ -85,7 +85,7 @@ function Buttons({ updatePCV, handleEditCVBtn }) {
       <button
         type="submit"
         className="edit-cv-sct-btn"
-        onClick={(event) => handleSubmit({ event, updatePCV })}
+        onClick={(event) => handleSubmit({ event, updatePCV, handleEditCVBtn })}
       >
         Save
       </button>

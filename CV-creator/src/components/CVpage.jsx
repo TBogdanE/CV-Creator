@@ -5,7 +5,6 @@ import EditCVBtn from "./EditCVBtn";
 
 export default function CVPage() {
   const [data, updatePersonCV] = useState(personCV);
-  console.log("data1", data);
 
   return (
     <>

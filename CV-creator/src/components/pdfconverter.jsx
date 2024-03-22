@@ -21,7 +21,7 @@ export default function generatePDF() {
 
   pdf.html(htmlContent, {
     callback: () => {
-      pdf.save("my-pdf-document.pdf");
+      pdf.save("my-cv.pdf");
     },
   });
 }

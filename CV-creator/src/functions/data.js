@@ -1,7 +1,7 @@
 class CVdata {
   constructor() {
-    this.name = "Your name";
-    this.email = "Your email";
+    this.name = "User name";
+    this.email = "User email";
     this.phone = "+4075 xxx xxxx";
     this.education = "School, University or Work";
     this.date = "1.1.1990";
@@ -15,4 +15,4 @@ class CVdata {
 
 const personCV = new CVdata();
 
-export { personCV };
+export default personCV;
